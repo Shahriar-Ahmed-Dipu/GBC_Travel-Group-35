@@ -1,18 +1,112 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
-*@
-@{
- 
+﻿@{
+    Layout = null; // Assuming you don't want to use any layout for this page
 }
 
-<h2>Admin Dashboard</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e7eff6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
 
-<div class="admin-panel-links">
-    <a href="@Url.Action("Create", "Flights")" class="btn btn-success">Add New Flight</a>
-    <a href="@Url.Action("Create", "Hotels")" class="btn btn-success">Add New Hotel</a>
-    <a href="@Url.Action("Create", "CarRentals")" class="btn btn-success">Add New Car Rental</a>
-    <!-- Include other management links as needed -->
-</div>
+        h2 {
+            color: #30475e;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-<!-- You can also include lists or tables displaying recent activity, pending approvals, etc. -->
+        .admin-panel-links {
+            max-width: 800px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .admin-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .admin-section:nth-child(odd) {
+                background-color: #fff;
+            }
+
+        .btn {
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            display: inline-block;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-add {
+            background-color: #3282b8;
+            color: white;
+        }
+
+        .btn-list {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: scale(1.03);
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        .btn-add:hover {
+            background-color: #4688c7;
+        }
+
+        .btn-list:hover {
+            background-color: #ccd1d9 ;
+            color:#4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h2>Admin Dashboard</h2>
+
+    <div class="admin-panel-links">
+        <div class="admin-section">
+            <a href="@Url.Action("Create", "Flights")" class="btn btn-add">Add New Flight</a>
+            <a href="@Url.Action("Index", "Flights")" class="btn btn-list">Flight List</a>
+        </div>
+
+        <div class="admin-section">
+            <a href="@Url.Action("Create", "Hotels")" class="btn btn-add">Add New Hotel</a>
+            <a href="@Url.Action("Index", "Hotels")" class="btn btn-list">Hotel List</a>
+        </div>
+
+        <div class="admin-section">
+            <a href="@Url.Action("Create", "CarRentals")" class="btn btn-add">Add New Car Rental</a>
+            <a href="@Url.Action("Index", "CarRentals")" class="btn btn-list">Car Rental List</a>
+        </div>
+        <!-- Include other management links as needed -->
+    </div>
+</body>
+</html>

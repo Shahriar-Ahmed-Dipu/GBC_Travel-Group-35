@@ -1,28 +1,102 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-    @model GBC_Travel_Group_35.Models.AdminLoginViewModel
-
-    <h2>Admin Login</h2>
-
-    <form asp-controller="Account" asp-action="AdminLogin" method="post">
-        <div class="form-group">
-            <label asp-for="Email"></label>
-            <input asp-for="Email" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="Password"></label>
-            <input asp-for="Password" class="form-control" />
-        </div>
-        <div class="form-group">
-            <input asp-for="RememberMe" />
-            <label asp-for="RememberMe"></label>
-        </div>
-        <button type="submit" class="btn btn-primary">Login</button>
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-    </form>
-
+﻿@{
+    Layout = null; // Assuming you don't want to use any layout for this page
 }
-<!-- Example content of AdminLogin.cshtml -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666666;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0069d9;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Admin Login</h2>
+        <form action="/Home/AdminPanel" method="get">
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input type="email" name="Email" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="Password">Password</label>
+                <input type="password" name="Password" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="RememberMe" id="RememberMe" />
+                <label for="RememberMe">Remember Me</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

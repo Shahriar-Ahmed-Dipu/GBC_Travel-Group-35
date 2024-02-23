@@ -10,7 +10,7 @@ namespace GBC_Travel_Group_35.Controllers
         private readonly ILogger<HomeController> _logger;
 
 
-        [Authorize(Roles = "AdminLogin")] // Add this to restrict access to only admin users
+       
         public IActionResult AdminPanel()
         {
             // Add logic if necessary to prepare data for the admin dashboard

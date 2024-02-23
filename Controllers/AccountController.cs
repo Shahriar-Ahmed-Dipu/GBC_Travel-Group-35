@@ -38,8 +38,9 @@ namespace GBC_Travel_Group_35.Controllers
 
             if (result.Succeeded)
             {
-                // If login is successful, redirect to the AdminPanel action in the HomeController
-                return RedirectToAction(nameof(HomeController.AdminPanel), "Home");
+               
+                // If login is successful, and role is ensured, redirect to the AdminPanel action in the HomeController
+                return RedirectToAction("AdminPanel", "Home");
             }
             else
             {
