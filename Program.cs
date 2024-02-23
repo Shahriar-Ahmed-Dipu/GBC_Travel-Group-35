@@ -1,3 +1,7 @@
+using GBC_Travel_Group_35.Data;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 namespace GBC_Travel_Group_35
 {
     public class Program
@@ -9,7 +13,23 @@ namespace GBC_Travel_Group_35
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            /// Add connection to the database(my)
+
+            builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+            builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true) .AddEntityFrameworkStores<ApplicationDbContext>() .AddDefaultTokenProviders();
+
+
+
             var app = builder.Build();
+
+
+            // Configure the HTTP request pipeline and the rest of your app setup...
+
+
+
+
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

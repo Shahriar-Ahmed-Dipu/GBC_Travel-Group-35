@@ -6,3 +6,27 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+
+
+
+
+
+
+
+<div class="jumbotron">
+    <h1>ABC Travel Website</h1>
+    <p>Welcome to the travel booking platform.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <button onclick="location.href='@Url.Action("AdminLogin", "Account")'" class="btn btn-primary">Admin Login</button>
+    </div>
+    <div class="col-md-4">
+        <button onclick="location.href='@Url.Action("Login", "Account")'" class="btn btn-primary">Customer Login</button>
+    </div>
+    <div class="col-md-4">
+        <button onclick="location.href='@Url.Action("Register", "Account")'" class="btn btn-primary">Customer Signup</button>
+    </div>
+</div>
