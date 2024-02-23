@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GBC_Travel_Group_35
 build_property.RootNamespace = GBC_Travel_Group_35
@@ -22,12 +30,76 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZG1pbkxvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/My Work/Web Application/GBC_Travel-Group-35/Views/CarRentals/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyUmVudGFsc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/My Work/Web Application/GBC_Travel-Group-35/Views/CarRentals/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyUmVudGFsc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/My Work/Web Application/GBC_Travel-Group-35/Views/CarRentals/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyUmVudGFsc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/My Work/Web Application/GBC_Travel-Group-35/Views/CarRentals/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyUmVudGFsc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/My Work/Web Application/GBC_Travel-Group-35/Views/CarRentals/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyUmVudGFsc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/My Work/Web Application/GBC_Travel-Group-35/Views/Flights/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/My Work/Web Application/GBC_Travel-Group-35/Views/Flights/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/My Work/Web Application/GBC_Travel-Group-35/Views/Flights/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/My Work/Web Application/GBC_Travel-Group-35/Views/Flights/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/My Work/Web Application/GBC_Travel-Group-35/Views/Flights/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/My Work/Web Application/GBC_Travel-Group-35/Views/Home/AdminPanel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pblBhbmVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/My Work/Web Application/GBC_Travel-Group-35/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/My Work/Web Application/GBC_Travel-Group-35/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/My Work/Web Application/GBC_Travel-Group-35/Views/Hotels/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/My Work/Web Application/GBC_Travel-Group-35/Views/Hotels/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/My Work/Web Application/GBC_Travel-Group-35/Views/Hotels/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/My Work/Web Application/GBC_Travel-Group-35/Views/Hotels/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/My Work/Web Application/GBC_Travel-Group-35/Views/Hotels/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/My Work/Web Application/GBC_Travel-Group-35/Views/Shared/Error.cshtml]

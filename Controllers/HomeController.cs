@@ -1,4 +1,5 @@
 using GBC_Travel_Group_35.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -8,6 +9,13 @@ namespace GBC_Travel_Group_35.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+
+        [Authorize(Roles = "AdminLogin")] // Add this to restrict access to only admin users
+        public IActionResult AdminPanel()
+        {
+            // Add logic if necessary to prepare data for the admin dashboard
+            return View();
+        }
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -28,5 +36,6 @@ namespace GBC_Travel_Group_35.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }
