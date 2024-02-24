@@ -82,7 +82,12 @@
 <body>
     <div class="login-container">
         <h2>Admin Login</h2>
-        <form action="/Home/AdminPanel" method="get">
+
+
+        <!-- <form action="/Home/AdminPanel" method="get"></form> -->
+
+        <form asp-controller="Home" asp-action="AdminPanel" method="post">
+
             <div class="form-group">
                 <label for="Email">Email</label>
                 <input type="email" name="Email" class="form-control" required />

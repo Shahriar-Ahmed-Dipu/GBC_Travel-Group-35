@@ -16,6 +16,7 @@ namespace GBC_Travel_Group_35.Controllers
             // Add logic if necessary to prepare data for the admin dashboard
             return View();
         }
+
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;

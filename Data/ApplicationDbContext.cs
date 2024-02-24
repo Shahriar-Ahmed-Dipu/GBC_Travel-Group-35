@@ -17,6 +17,8 @@ namespace GBC_Travel_Group_35.Data
         public DbSet<Flight> Flights { get; set; }
         public DbSet<Hotel> Hotels { get; set; }
         public DbSet<CarRental> CarRentals { get; set; }
+        public DbSet<Booking> Bookings { get; set; }
+
     }
 }
 

@@ -1,0 +1,65 @@
+﻿@{
+    Layout = null; // If you have a layout, you can remove this line
+}
+@model GBC_Travel_Group_35.Models.Booking
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .confirmation-container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #28a745;
+        }
+
+        .success-animation {
+            font-size: 60px;
+            color: #28a745;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .animate__animated {
+            --animate-duration: 2s; /* Customize the duration of the animation */
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <h2 class="animate__animated animate__bounceIn">Booking Confirmation</h2>
+        <div class="success-animation animate__animated animate__tada">
+            <!-- You can use a text-based success icon or an image -->
+            &#x2705; <!-- This is a checkmark emoji, you can replace it with an image if you prefer -->
+        </div>
+        <p>Thank you, @Model.UserEmail. Your booking is confirmed.</p>
+        <p>Booking Date: @Model.BookingDate.ToString("dd MMM yyyy")</p>
+        <p>Price: $@Model.Price</p>
+        <!-- Display more details based on your requirements -->
+    </div>
+</body>
+</html>

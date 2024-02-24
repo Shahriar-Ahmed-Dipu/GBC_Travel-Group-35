@@ -1,0 +1,174 @@
+﻿@{
+    ViewData["Title"] = "Booking Page";
+}
+
+
+<style>
+
+    /* Add some general styling to the body for a better font */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Style the nav-tabs with a more modern look */
+.nav-tabs {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.nav-link {
+    border: none;
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.nav-item:hover .nav-link {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Style the tab-content */
+.tab-content {
+    background: white;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    margin-top: 10px;
+}
+
+/* Style the inputs and button */
+input[type="text"],
+input[type="number"],
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-sizing: border-box; /* Added box-sizing */
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button.btn {
+    margin-top:10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Add a hover effect for inputs */
+input[type="text"]:hover,
+input[type="number"]:hover,
+input[type="datetime-local"]:hover {
+    border-color: #007bff;
+}
+
+/* Add a focus effect for inputs */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="datetime-local"]:focus {
+    border-color: #0056b3;
+    outline: none; /* Removes the default focus outline */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+
+
+
+</style>
+
+
+
+<div>
+    <!-- Tabs for each category -->
+    <ul class="nav nav-tabs" id="bookingTabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="flights-tab" data-toggle="tab" href="#flights" role="tab">Flights</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="hotels-tab" data-toggle="tab" href="#hotels" role="tab">Hotels</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="cars-tab" data-toggle="tab" href="#cars" role="tab">Cars</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content" id="bookingTabsContent">
+        <!-- Flights tab pane -->
+        <div class="tab-pane fade show active" id="flights" role="tabpanel">
+            <form asp-controller="Booking" asp-action="SearchFlights" method="get">
+                <!-- Flights search form -->
+                <form asp-controller="Booking" asp-action="SearchFlights" method="get">
+                    <input type="text" required name="AirlineName" placeholder="Airline Name" />
+                    <input type="datetime-local" name="DepartureTime" placeholder="Departure Time" />
+                    <input type="datetime-local" name="DepartureTime" placeholder="Departure Time" />
+                    <input type="datetime-local" name="ArrivalTime" placeholder="Arrival Time" />
+                    <input type="number" name="Price" placeholder="Max Price" />
+                    <button type="submit" class="btn btn-primary">Search Flights</button>
+                </form>
+
+
+            </form>
+        </div>
+
+        <!-- Hotels tab pane -->
+        <div class="tab-pane fade" id="hotels" role="tabpanel">
+            <form asp-controller="Booking" asp-action="SearchHotels" method="get">
+                <input type="text" required name="HotelName" placeholder="Hotel Name" />
+                <input type="text" required name="Location" placeholder="Location" />
+                <input type="number" name="PricePerNight" placeholder="Max Price Per Night" />
+                <input type="number" name="Rating" placeholder="Rating" min="1" max="5" />
+                <button type="submit" class="btn btn-primary">Search Hotels</button>
+            </form>
+
+        </div>
+
+        <!-- Cars tab pane -->
+        <div class="tab-pane fade" id="cars" role="tabpanel">
+            <form asp-controller="Booking" asp-action="SearchCars" method="get">
+                <input type="text" required name="Model" placeholder="Car Model" />
+                <input type="text" required name="RentalCompany" placeholder="Rental Company" />
+                <input type="number" name="Price" placeholder="Max Rental Price" />
+                <div>
+                    <input type="checkbox" name="IsAvailable" id="IsAvailable" />
+                    <label for="IsAvailable">Available Now</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Search Cars</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(function () {
+            // Initialize the tabs
+            $('#bookingTabs a').on('click', function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
+        });
+    </script>
+}

@@ -50,6 +50,31 @@ namespace GBC_Travel_Group_35.Controllers
             }
         }
 
+
+
+
+
+
+
+
+        
+
+        public IActionResult CustomerLogin()
+        {
+            return View(); // Make sure you have a corresponding CustomerLogin.cshtml Razor view
+        }
+
+        public IActionResult GuestLogin()
+        {
+            return View(); // Make sure you have a corresponding GuestLogin.cshtml Razor view
+        }
+
+
+
+
+
+
+
     }
 }
 
